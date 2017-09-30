@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="/assets/ico/favicon.ico">
+
+    <title>#bitup</title>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="/dist/js/bootstrap.min.js"></script>
+    <script src="/assets/js/docs.min.js"></script>
+    <!-- Bootstrap core CSS -->
+    <link href="/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/dist/css/dashboard.css" rel="stylesheet">
+    <link href="/dist/css/footer.css" rel="stylesheet">
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]>
+    <script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+
+<div th:insert="menu :: menu (selected='1')"></div>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <div class="row">
+                <div class="page-header">
+                    <div class="alert alert-danger">
+                        <span class="glyphicon glyphicon-info-sign"></span> Доступ закрыт!
+                        <h2></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <p>Всего к доначислению по телу депозита</p><br/>
+            <p><span class="glyphicon glyphicon-log-in">&nbsp;0 BTC</span></p>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+
+            <button class="btn btn-primary btn-lg" type="button" style="width:49%;"><span
+                    class="glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;Вывод</button>
+            <button class="btn btn-primary btn-lg" type="button" style="width:49%;"><span
+                    class="glyphicon glyphicon-list-alt"></span>&nbsp;&nbsp;&nbsp;История</button>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <h4 class="sub-header"><span class="glyphicon glyphicon-briefcase"></span>&nbsp;Ваши депозиты
+                <button class="btn btn-default btn-sm pull pull-right" type="button">показать всё</button></h4><br/>
+            <div class="col-sm-4 col-md-4 ">
+                <p class="text text-left">11 июля 2017</p>
+            </div>
+            <div class="col-sm-4 col-md-4">
+                <p class="text text-center">6 месяцев</p>
+            </div>
+            <div class="col-sm-4 col-md-4">
+                <p class="text text-right">Год&nbsp;</p>
+            </div>
+            <div class="col-sm-12 col-md-12">
+                <div class="progress">
+                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 5%">
+                        5%
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 col-md-4 ">
+                <p class="text text-left">0.0018 BTC</p>
+            </div>
+            <div class="col-sm-4 col-md-4">
+                <p class="text text-center"><a href="#">ID: 30D866</a></p>
+            </div>
+            <div class="col-sm-4 col-md-4">
+                <p class="text text-right">0.01593 BTC&nbsp;</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <h4 class="sub-header"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;История всех транзакций
+                <button class="btn btn-default btn-sm pull pull-right" type="button">показать всё</button></h4>
+            <table class="table table-hover table-striped">
+                <thead>
+                <tr>
+                    <th>№</th>
+                    <th>ДАТА</th>
+                    <th>ТИП</th>
+                    <th>СУММА BTC</th>
+                    <th>ОПИСАНИЕ</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>3A6645</td>
+                    <td>24 авг. 2017, 23:37</td>
+                    <td>Вывод</td>
+                    <td>-0.0012</td>
+                    <td>На 1BinJ7ujMopjfngqszSm3u6jSguAbMnkLh</td>
+
+                </tr>
+                <tr>
+                    <td>F3BBC7</td>
+                    <td>24 авг. 2017, 16:38</td>
+                    <td>Возврат тела Депозита</td>
+                    <td>0.01115342 BTC</td>
+                    <td>Согласно депозита ID: 30D866</td>
+
+                </tr>
+                <tr>
+                    <td>7D423A </td>
+                    <td>28 авг. 2017, 21:18</td>
+                    <td>Выплата</td>
+                    <td>0.00004364 BTC</td>
+                    <td>Согласно депозита ID: 30D866</td>
+
+                </tr>
+                <tr>
+                    <td>45D619 </td>
+                    <td>30 авг. 2017, 12:32</td>
+                    <td>Выплата</td>
+                    <td>0.00032064 BTC</td>
+                    <td>Согласно депозита ID: 30D866</td>
+
+                </tr>
+                <tr data-th-each="transaction : ${transactions}">
+                    <td class="message" data-th-text="${user.id}"></td>
+                    <td class="message" data-th-text="${user.name}"></td>
+                    <td class="message" data-th-text="${user.email}"></td>
+                    <td class="message" data-th-text="${user.tel}"></td>
+                    <td class="message" data-th-text="${user.comment}"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div th:insert="menu-footer :: menu-footer"></div>
+
+
+</body>
+
+</html>

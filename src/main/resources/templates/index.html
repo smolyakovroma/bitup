@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>#bitup</title>
+    <link rel="shortcut icon" href="/assets/ico/favicon.ico" />
+    <!--<link rel="stylesheet" type="text/css" th:href="@{/css/login.css}" />-->
+    <link href="/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/dist/css/signin.css" rel="stylesheet" />
+    <script src="/dist/js/jquery.min.js"></script>
+    <script src="/dist/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><b>#BITUP</b></a>
+        </div>
+    </div>
+</div>
+<div class="container">
+
+    <div class="page-header">
+        <div align="center" class="alert alert-danger" th:if="${param.error}">
+            <p style="font-size: 20; color: #FF1C19;">Логин или пароль введены не корректно!</p>
+        </div>
+    </div>
+
+
+
+    <form th:action="@{/}" method="POST" class="form-signin" style="background-color: #FFFFFF;">
+
+        <h3 class="form-signin-heading text-center">ВХОД</h3>
+
+        <input type="text" class="form-control" id="email" name="email" th:placeholder="Email" placeholder="Email">
+        <br/>
+
+
+        <input type="password" class="form-control" id="password" name="password" th:placeholder="Пароль" placeholder="Пароль">
+
+        <br/>
+
+        <button class="btn btn-lg btn-primary btn-block" name="Submit" value="Войти" type="Submit" th:text="Войти">Войти</button>
+        <br/><p class="text text-left"><a href="/recovery">Забыли пароль?</a></p>
+    </form>
+
+
+</div>
+</body>
+
+</html>

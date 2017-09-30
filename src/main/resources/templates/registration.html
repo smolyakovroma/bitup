@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>#bitup</title>
+    <link rel="shortcut icon" href="/assets/ico/favicon.ico"/>
+    <!--<link rel="stylesheet" type="text/css" th:href="@{/css/login.css}" />-->
+    <link href="/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="/dist/css/signin.css" rel="stylesheet"/>
+    <script src="/dist/js/jquery.min.js"></script>
+    <script src="/dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="navbar navbar-fixed-top" role="navigation">
+    <form th:action="@{/}" method="get">
+
+        <button class="btn btn-md btn-warning btn-block" type="Submit"><img src="/dist/image/logo.png" style="top-padding:20px"/></button>
+    </form>
+</div>
+<br/>
+
+<div class="container">
+
+
+    <form th:action="@{/registration}" method="POST" class="form-signin">
+        <div align="center" class="alert alert-danger" th:if="${error}">
+            <p style="font-size: 20; color: #FF1C19;" th:text="${error}">Ошибка!</p>
+        </div>
+        <h3 class="form-signin-heading text-center">Подтвердите пароль для <b th:text="${email}"></b></h3>
+        <br/>
+        <input type="text" id="name" name="name" th:value="${name}" placeholder="Как к вам обращяться" class="form-control"><br/>
+        <input type="hidden" id="email" name="email" th:value="${email}">
+        <input type="password" id="password" name="password" placeholder="Пароль" class="form-control"/> <br/>
+        <input type="password" id="password2" name="password2" placeholder="Повторите пароль" class="form-control"/> <br/>
+
+
+        <button class="btn btn-lg btn-primary btn-block" name="Submit" value="Подтвердить" type="Submit"
+                th:text="Подтвердить"></button>
+    </form>
+
+</div>
+
+</body>
+</html>
